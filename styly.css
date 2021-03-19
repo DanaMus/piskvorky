@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #615dad, #ffc8da);
+}
+
+.container {
+  width: 45%;
+  margin: 100px auto;
+}
+
+.container .image {
+  border-radius: 10px 10px 0 0;
+}
