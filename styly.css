@@ -10,6 +10,7 @@ body {
 
 .container {
   width: 45%;
+  min-width: 400px;
   margin: 100px auto;
   background-color: #283e50;
   border-radius: 10px 10px 0 0;
