@@ -4,6 +4,7 @@
 
 body {
   background-image: linear-gradient(to bottom, #615dad, #ffc8da);
+  color: white;
 }
 
 .container {
@@ -12,7 +13,6 @@ body {
   background-color: #283e50;
   border-radius: 10px 10px 0 0;
   text-align: center;
-  color: white;
   font-size: 20px;
   line-height: 1.5;
 }
@@ -29,4 +29,32 @@ body {
 .container .image {
   border-radius: 10px 10px 0 0;
   width: 100%;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+}
+
+.link {
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+}
+
+.link-rules {
+  background-color: #1fcca4;
+  margin-bottom: 2px;
+}
+
+.link-rules:hover {
+  background-color: #1cbb96;
+}
+
+.link-start {
+  background-color: #0197f6;
+}
+
+.link-start:hover {
+  background-color: #0090e9;
 }
