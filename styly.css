@@ -20,7 +20,8 @@ body {
 }
 
 .description {
-  padding: 0 20px 50px 20px;
+  /* padding: 0 20px 50px 20px; */
+  padding: 30px;
 }
 
 .description-heading {
@@ -44,12 +45,14 @@ body {
   padding: 15px;
 }
 
-.link-rules {
+.link-rules,
+.link-home {
   background-color: #1fcca4;
   margin-bottom: 2px;
 }
 
-.link-rules:hover {
+.link-rules:hover,
+.link-home:hover {
   background-color: #1cbb96;
 }
 
@@ -59,4 +62,20 @@ body {
 
 .link-start:hover {
   background-color: #0090e9;
+}
+
+.list li {
+  text-align: left;
+  padding: 10px 15px;
+  line-height: 1;
+}
+
+.examples img {
+  width: 100%;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.8em;
+  line-height: 1;
 }
