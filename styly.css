@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  width: 45%;
+  max-width: 45%;
   min-width: 400px;
   margin: 100px auto;
   background-color: #283e50;
@@ -78,4 +78,15 @@ figcaption {
   font-style: italic;
   font-size: 0.8em;
   line-height: 1;
+}
+
+@media screen and (min-width: 800px) {
+  .examples {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .examples figure {
+    width: 46%;
+    margin: 10px;
+  }
 }
