@@ -19,6 +19,13 @@ body {
   line-height: 1.5;
 }
 
+.game-container {
+  max-width: 80vw;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 20px;
+}
+
 .description {
   padding: 30px;
 }
@@ -96,6 +103,37 @@ figcaption {
   font-style: italic;
   font-size: 0.8em;
   line-height: 1;
+}
+
+/* Stránka home */
+
+.btn-container {
+  display: flex;
+}
+
+.home-btn-container {
+  width: 2em;
+  height: 2em;
+  padding: 7px;
+  background-color: #1fcca4;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.home-btn-container:hover {
+  background-color: #1cbb96;
+}
+
+.game-btn-container {
+  width: 2em;
+  height: 2em;
+  padding: 7px;
+  background-color: #0197f6;
+  border-radius: 3px;
+}
+
+.game-btn-container:hover {
+  background-color: #0090e9;
 }
 
 @media screen and (min-width: 800px) {
