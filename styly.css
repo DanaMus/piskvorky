@@ -107,6 +107,16 @@ figcaption {
 
 /* Stránka home */
 
+.description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-description {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
 .btn-container {
   display: flex;
 }
