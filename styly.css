@@ -6,11 +6,12 @@ body {
   background-image: linear-gradient(to bottom, #615dad, #ffc8da);
   color: white;
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
 }
 
 .container {
   max-width: 45%;
-  min-width: 400px;
+  min-width: 320px;
   margin: 100px auto;
   background-color: #283e50;
   border-radius: 10px 10px 0 0;
@@ -105,9 +106,14 @@ figcaption {
   line-height: 1;
 }
 
-/* Stránka home */
+/* Stránka hra */
 
-.description {
+.game-container {
+  max-width: 80vmin;
+  min-width: 300px;
+}
+
+.game-description {
   display: flex;
   justify-content: space-between;
 }
@@ -144,6 +150,28 @@ figcaption {
 
 .game-btn-container:hover {
   background-color: #0090e9;
+}
+
+.game {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  width: 25px;
+  height: 25px;
+  flex: 1 1 10%;
+  margin: 0;
+  padding: 0;
+  opacity: 0.5;
+  border: 1px solid black;
+}
+
+.square:hover,
+.square:focus {
+  opacity: 0.7;
 }
 
 @media screen and (min-width: 800px) {
