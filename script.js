@@ -7,7 +7,7 @@ const playerElm = document.querySelector('.player');
 
 const Player = () => {
   return `
-    <p class="player-description">Hraje: <img src="${activePlayer}.svg" alt="${activePlayer}" class="${activePlayer} white" /></p>
+    <p class="player-description">Hraje: </p><p><img src="${activePlayer}.svg" alt="${activePlayer}" class="${activePlayer} white" /></p>
   `;
 };
 

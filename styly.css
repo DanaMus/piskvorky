@@ -131,6 +131,8 @@ figcaption {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
+  height: 2em;
 }
 
 /* Hraje... */
@@ -138,16 +140,14 @@ figcaption {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.5rem;
+  display: flex;
 }
 
-.player-description p {
-  margin-top: 0;
-}
-
-.player-description .circle,
-.player-description .cross {
+.player img {
   width: 1.5rem;
   height: 1.5rem;
+  align-items: center;
+  margin-left: 5px;
 }
 
 /* Odkazy domů a hrát znovu */
