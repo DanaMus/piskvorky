@@ -1,3 +1,5 @@
+/* Margin u úzké verze, vystředit kolečko */
+
 * {
   box-sizing: border-box;
 }
@@ -19,6 +21,12 @@ body {
   text-align: center;
   font-size: 20px;
   line-height: 1.5;
+}
+
+/* Zúžení kontejneru na úvodní stránce */
+
+.index-page {
+  max-width: 380px;
 }
 
 .description {
@@ -121,16 +129,26 @@ figcaption {
 .game-description {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
+  align-items: center;
 }
 
 /* Hraje... */
 .player-description {
   text-transform: uppercase;
   font-weight: 700;
+  font-size: 1.5rem;
 }
 
-/* Odkazy domů a replay */
+.player-description p {
+  margin-top: 0;
+}
+
+.player-description .circle {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Odkazy domů a hrát znovu */
 .btn-container {
   display: flex;
 }
@@ -195,6 +213,29 @@ figcaption {
 .square:hover,
 .square:focus {
   opacity: 0.7;
+}
+
+/* Křížky a kolečka v buttonu */
+.square-cross {
+  background-image: url(cross.svg);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+}
+
+.square-cross:active {
+  border: 2px solid black;
+}
+
+.square-circle {
+  background-image: url(circle.svg);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+}
+
+.square-circle:active {
+  border: 2px solid black;
 }
 
 /* Media query pro stránku pravidla - figure */
