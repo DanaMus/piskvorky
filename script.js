@@ -14,8 +14,10 @@ for (let i = 1; i < buttonElm.length; i++) {
     ) {
       if (activePlayer === 'circle') {
         buttonElm[i].classList.add('square-circle');
+        buttonElm[i].setAttribute('disabled', true);
       } else {
         buttonElm[i].classList.add('square-cross');
+        buttonElm[i].setAttribute('disabled', true);
       }
     }
   });
