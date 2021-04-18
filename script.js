@@ -1,12 +1,22 @@
 'use strict';
 
-const activePlayer = 'circle';
-const buttonElm = document.querySelector('.square');
+let activePlayer = 'circle';
+const buttonElm = document.querySelectorAll('.square');
+const playElm = document.querySelector('.gamein');
 
-buttonElm.addEventListener('click', () => {
-  if (activePlayer === 'circle') {
-    buttonElm.classList.add('square-circle');
-  } else {
-    buttonElm.classList.add('square-cross');
-  }
-});
+for (let i = 1; i < buttonElm.length; i++) {
+  buttonElm[i].addEventListener('click', () => {
+    if (
+      !(
+        buttonElm[i].classList.contains('square-circle') &&
+        buttonElm[i].classList.contains('square-cross')
+      )
+    ) {
+      if (activePlayer === 'circle') {
+        buttonElm[i].classList.add('square-circle');
+      } else {
+        buttonElm[i].classList.add('square-cross');
+      }
+    }
+  });
+}

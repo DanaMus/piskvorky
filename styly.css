@@ -215,6 +215,8 @@ figcaption {
   opacity: 0.7;
 }
 
+/* Úkol 4 */
+
 /* Křížky a kolečka v buttonu */
 .square-cross {
   background-image: url(cross.svg);
