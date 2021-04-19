@@ -13,7 +13,7 @@ const Player = () => {
 
 playerElm.innerHTML = Player(activePlayer);
 
-for (let i = 1; i < buttonElm.length; i++) {
+for (let i = 0; i < buttonElm.length; i++) {
   buttonElm[i].addEventListener('click', () => {
     if (
       !(
