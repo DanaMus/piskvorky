@@ -222,6 +222,8 @@ figcaption {
 /* Křížky a kolečka v buttonu */
 .square-cross {
   background-image: url(cross.svg);
+  position: relative;
+  z-index: 2;
   background-repeat: no-repeat;
   background-size: 60%;
   background-position: center;
@@ -242,6 +244,11 @@ figcaption {
 
 .square-circle:active {
   border: 2px solid black;
+}
+
+.square-cross[disabled],
+.square-circle[disabled] {
+  opacity: 0.8;
 }
 
 @keyframes effect {
