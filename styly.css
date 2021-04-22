@@ -215,6 +215,7 @@ figcaption {
 .square:hover,
 .square:focus {
   opacity: 0.7;
+  cursor: pointer;
 }
 
 /* Úkol 4 */
@@ -222,16 +223,10 @@ figcaption {
 /* Křížky a kolečka v buttonu */
 .square-cross {
   background-image: url(cross.svg);
-  position: relative;
-  z-index: 2;
   background-repeat: no-repeat;
   background-size: 60%;
   background-position: center;
   animation: effect 0.15s ease-in-out;
-}
-
-.square-cross:active {
-  border: 2px solid black;
 }
 
 .square-circle {
@@ -240,10 +235,6 @@ figcaption {
   background-size: 60%;
   background-position: center;
   animation: effect 0.15s ease-in-out;
-}
-
-.square-circle:active {
-  border: 2px solid black;
 }
 
 .square-cross[disabled],

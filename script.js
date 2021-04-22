@@ -15,22 +15,22 @@ playerElm.innerHTML = Player(activePlayer);
 
 for (let i = 0; i < buttonElm.length; i++) {
   buttonElm[i].addEventListener('click', () => {
-    if (
+    /* if (
       !(
         buttonElm[i].classList.contains('square-circle') &&
         buttonElm[i].classList.contains('square-cross')
       )
-    ) {
-      if (activePlayer === 'circle') {
-        buttonElm[i].classList.add('square-circle');
-        buttonElm[i].setAttribute('disabled', true);
-        activePlayer = 'cross';
-      } else {
-        buttonElm[i].classList.add('square-cross');
-        buttonElm[i].setAttribute('disabled', true);
-        activePlayer = 'circle';
-      }
-      playerElm.innerHTML = Player();
+    ) { */
+    if (activePlayer === 'circle') {
+      buttonElm[i].classList.add('square-circle');
+      buttonElm[i].setAttribute('disabled', true);
+      activePlayer = 'cross';
+    } else {
+      buttonElm[i].classList.add('square-cross');
+      buttonElm[i].setAttribute('disabled', true);
+      activePlayer = 'circle';
     }
+    playerElm.innerHTML = Player();
+    /* } */
   });
 }
