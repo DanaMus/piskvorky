@@ -15,16 +15,11 @@ playerElm.innerHTML = Player(activePlayer);
 
 for (let i = 0; i < buttonElm.length; i++) {
   buttonElm[i].addEventListener('click', () => {
-    /* if (
-      !(
-        buttonElm[i].classList.contains('square-circle') &&
-        buttonElm[i].classList.contains('square-cross')
-      )
-    ) { */
     if (activePlayer === 'circle') {
       buttonElm[i].classList.add('square-circle');
       buttonElm[i].setAttribute('disabled', true);
       activePlayer = 'cross';
+      /* Zhodnocení, jestli jde o výherní tah */
       if (isWinningMove(buttonElm[i]) === true) {
         setTimeout(() => {
           let confirmation = confirm('Vyhrálo kolečko.');
