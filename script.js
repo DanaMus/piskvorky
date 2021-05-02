@@ -80,12 +80,15 @@ const isWinningMove = (field) => {
   const origin = getPosition(field);
   const symbol = getSymbol(field);
   let i;
+
   let inRow = 1;
   i = origin.column;
+
   while (i > 0 && symbol === getSymbol(getField(origin.row, i - 1))) {
     inRow++;
     i--;
   }
+
   i = origin.column;
   while (
     i < boardSize - 1 &&
@@ -97,6 +100,7 @@ const isWinningMove = (field) => {
   if (inRow >= symbolsToWin) {
     return true;
   }
+
   let inColumn = 1;
   i = origin.row;
   while (i > 0 && symbol === getSymbol(getField(i - 1, origin.column))) {
@@ -115,5 +119,60 @@ const isWinningMove = (field) => {
   if (inColumn >= symbolsToWin) {
     return true;
   }
+
+  let inDiagonalA = 1;
+  let r = origin.row;
+  let c = origin.column;
+  while (r > 0 && c > 0 && symbol === getSymbol(getField(r - 1, c - 1))) {
+    inDiagonalA++;
+    r--;
+    c--;
+  }
+
+  r = origin.row;
+  c = origin.column;
+  while (
+    r < boardSize - 1 &&
+    c < boardSize - 1 &&
+    symbol === getSymbol(getField(r + 1, c + 1))
+  ) {
+    inDiagonalA++;
+    r++;
+    c++;
+  }
+
+  if (inDiagonalA >= symbolsToWin) {
+    return true;
+  }
+
+  let inDiagonalB = 1;
+  r = origin.row;
+  c = origin.column;
+  while (
+    r > 0 &&
+    c < boardSize - 1 &&
+    symbol === getSymbol(getField(r - 1, c + 1))
+  ) {
+    inDiagonalB++;
+    r--;
+    c++;
+  }
+
+  r = origin.row;
+  c = origin.column;
+  while (
+    r < boardSize - 1 &&
+    c < 0 &&
+    symbol === getSymbol(getField(r + 1, c - 1))
+  ) {
+    inDiagonalB++;
+    r++;
+    c--;
+  }
+
+  if (inDiagonalB >= symbolsToWin) {
+    return true;
+  }
+
   return false;
 };
