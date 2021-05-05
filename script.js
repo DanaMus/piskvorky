@@ -19,10 +19,10 @@ for (let i = 0; i < buttonElm.length; i++) {
       buttonElm[i].classList.add('square-circle');
       buttonElm[i].setAttribute('disabled', true);
       activePlayer = 'cross';
-      /* Zhodnocení, jestli jde o výherní tah */
+      /* Zhodnocení, jestli jde o výherní tah, v případě confirm-"ok" nová hra */
       if (isWinningMove(buttonElm[i]) === true) {
         setTimeout(() => {
-          let confirmation = confirm('Vyhrálo kolečko.');
+          let confirmation = confirm('Vyhrálo kolečko. Chceš hrát znovu?');
           if (confirmation === true) {
             location.reload();
           }
@@ -34,7 +34,7 @@ for (let i = 0; i < buttonElm.length; i++) {
       activePlayer = 'circle';
       if (isWinningMove(buttonElm[i]) === true) {
         setTimeout(() => {
-          let confirmation = confirm('Vyhrál křížek.');
+          let confirmation = confirm('Vyhrál křížek. Chceš hrát znovu?');
           if (confirmation === true) {
             location.reload();
           }
@@ -115,6 +115,10 @@ const isWinningMove = (field) => {
     return true;
   }
 
+  /* Zhodnocení diagonály - směr \ */
+
+  /* K levému hornímu rohu */
+
   let inDiagonalA = 1;
   let r = origin.row;
   let c = origin.column;
@@ -123,6 +127,8 @@ const isWinningMove = (field) => {
     r--;
     c--;
   }
+
+  /* K pravému dolnímu rohu */
 
   r = origin.row;
   c = origin.column;
@@ -140,6 +146,10 @@ const isWinningMove = (field) => {
     return true;
   }
 
+  /* Zhodnocení diagonály - směr / */
+
+  /* K pravému hornímu rohu */
+
   let inDiagonalB = 1;
   r = origin.row;
   c = origin.column;
@@ -153,11 +163,13 @@ const isWinningMove = (field) => {
     c++;
   }
 
+  /* K levému dolnímu rohu */
+
   r = origin.row;
   c = origin.column;
   while (
     r < boardSize - 1 &&
-    c < 0 &&
+    c > 0 &&
     symbol === getSymbol(getField(r + 1, c - 1))
   ) {
     inDiagonalB++;
